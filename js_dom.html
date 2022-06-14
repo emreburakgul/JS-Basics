@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+</head>
+
+<body>
+    <div id="square" style="width: 200px; height: 200px;"></div>
+    <script>
+        /*
+            DOM=> Document Object Model
+            Metin bazlı bir dosya olan HTML belgesini, nesne modeline çeviren kütüphane
+
+        */
+        
+        let squareDiv= document.getElementById("square");
+        console.log(squareDiv); // consolda kodun değiştirilmiş hali yansır..
+        squareDiv.style.backgroundColor = "red";
+        squareDiv.style.width='300px';
+        squareDiv.style.height="300px";
+        document.body.style.backgroundColor='gray';
+        
+        let headElement=document.head;
+        let formElement= document.forms;
+        let imgElement= document.images;
+
+        // document.getElementById  sadece ıd tekil
+
+        let rowElements=document.getElementsByClassName("row");
+        let divElements=document.getElementsByTagName("div");
+        let radioButtons=document.getElementsByName("gender");
+
+        let elementById=document.querySelector('#square');
+        let divElemenetById=document.querySelector('div#square');
+        let divElementByIdAndClass=document.querySelector("div#square.row")
+        let diveElement=document.querySelector('div');//birinciyi getirir...
+        
+        
+
+
+
+
+    </script>
+</body>
+
+</html>

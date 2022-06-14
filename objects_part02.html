@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        JS Objects Part 02
+    -->
+
+    <script>
+
+        // Literal object
+        let person = {
+            firstName: '',
+            lastName: '',
+            walk: function () {
+
+            }
+        };
+
+        person.firstName = 'Tsubasa';
+        person.lastName = 'Ozora';
+        person.walk();
+
+        // Constructor
+        function Person() {
+            var _firstName = 'Backing Field Value';
+
+            this.firstName = '';
+            this.lastName = '';
+            this.walk = function () { }
+        }
+
+        // prototype
+        // new Person() şeklinde Person tipinden yeni bir instance oluşturma aşaması
+        // daha performanslı çalışsın istersem, tip tanımını constructor içinde değil
+        // aşağıdaki gibi prototype bazlı yapmam gerekirdi.
+
+        // Person.prototype.firstName = '';
+        // Person.prototype.lastName = '';
+        // Person.prototype.walk = function () { };
+        Person.prototype.getFirstName = function () {
+            // prototype ile tanımladığım bir fonksiyondan
+            // constructor içindeki bir değişkene erişemem!!
+            return _firstName; // hata fırlatır
+        };
+        Person.prototype.speak = function () { };
+
+        let person2 = new Person();
+        person2.firstName = 'Tsubasa';
+        person2.lastName = 'Ozora';
+        person2.walk();
+        person2.speak = function () { }
+
+        let person3 = new Person();
+        person3.speak();
+
+        let name = '   Tsubasa     Ozora    ';
+
+        String.prototype.fullTrim = function () {
+            return 'Tsubasa Ozora';
+        };
+
+
+
+    </script>
+</body>
+
+</html>

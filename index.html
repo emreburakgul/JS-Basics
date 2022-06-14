@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        JavaScript Objects
+    -->
+    <script>
+
+        var sumNumbers = function (number1, number2) {
+            return number1 + number2;
+        };
+
+        let result = sumNumbers(10, 20);
+
+        // function sumNumbers (number1, number2) {
+        //     return number1 + number2;
+        // }
+
+        // function yapısı aynı zamanda bir sınıf constructor metodu gibi de davranabilir
+        // ES5
+
+        // Person isimli bu yapı hem Person adında yeni bir tip tanımı ortaya koyar, hem
+        // Person tipinin yapıcı (contructor) metodudur, aynı zamanda Person tipindeki
+        // üyeleri tanımlayabildiğim sınıf gövdesi gibi davranır
+        function Person(firstName, lastName) {
+            this.firstName = '';
+            this.lastName = '';
+
+            this.walk = function () {
+
+            };
+
+            this.getFullName = function () {
+                return this.firstName + ' ' + this.lastName;
+            };
+        }
+
+        let person = new Person();
+        person.firstName = 'Tsubasa';
+        person.lastName = 'Ozora';
+
+        // Her ne kadar constructor içinde age adında bir üye tanımlanmamış olsa da
+        // ben instance üzerinde runtime'da bir üye ekleyebilirim
+        person.age = 30;
+
+        let person2 = new Person();
+        // person2.age = 10;
+
+        person2.walk();
+
+        function Car(make, model) {
+            // Arabada iki tane readonly property olacak (marka {make}, model {model})
+            // property değerleri constructor çağırıldığında alınacak
+            // daha sonra değiştirilemeyecek
+
+            const _make = make;
+            let _model = model;
+
+            this.getMake = function () {
+                return _make;
+            };
+
+            // Aslında aşağıdaki iki metotla ben Model adında bir Property
+            // oluşturuyorum.
+            this.getModel = function () {
+                return _model;
+            };
+
+            this.setModel = function (model) {
+                // model argümanı String değilse aşağıdaki backing field'a atama yapılmasın
+
+                _model = model && typeof model == 'string'
+                    ? model
+                    : '';
+                
+                // if (model && typeof model == 'string') {
+                //     _model = model;
+                // }
+                // else {
+                //     _model = '';
+                // }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

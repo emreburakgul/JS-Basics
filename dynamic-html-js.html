@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        Dynamic HTML with JS
+    -->
+    <script>
+        // div elementi nesne olarak oluşturuldu, henüz sayfaya eklenmedi
+        let divElement = document.createElement('div');
+
+        divElement.style.position = 'absolute';
+        divElement.style.top = '10px';
+        divElement.style.left = '10px';
+        divElement.style.width = '200px';
+        divElement.style.height = '200px';
+        divElement.style.backgroundColor = 'red';
+        divElement.addEventListener('click', function () {
+            alert('Tıklandı');
+        });
+
+        divElement.onclick = function () {
+            alert('Tıklandı');
+        };
+
+        divElement.style.cursor = 'pointer';
+        
+        // div elementini body'ye ekledim
+        document.body.appendChild(divElement);
+
+
+    </script>
+</body>
+
+</html>

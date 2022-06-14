@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //FUNCTIONS
+
+        function sumNumbers(number1,number2) {
+
+            return number1+number2;
+        }
+        let total= sumNumbers(10,20);
+        total = sumNumbers('onbeş',22);
+        total = sumNumbers(22,'onbeş');
+        total=sumNumbers('22','15');// NaN =>Not a Number
+        total = sumNumbers(undefined,null);
+        console.log(total);
+    </script>
+    
+</body>
+</html>

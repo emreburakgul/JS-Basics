@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        JAVA SCRIPT
+        Java'yla pek bir ilgisi yok
+        Script: Bazı programlama dilleri için kullanılan bir ifade
+            Eğer programlama dili derlenmeden(compile),yorumlanarak(interpret) çalışıyorsa
+            o programa dillerine script denir.
+
+        Esasında bu dil ilk ortaya çıktığında adı LiveScript
+        Adı sonradan, bir nevi pazarlama stratejisi olarak JavaScript olarak değiştiriliyor
+        Aynı zamanda resmi adı ECMAScrit
+        ECMA: European Computer Manufactures Assaciation
+
+        Niye var?
+        Bir sayfaya dinamizm, etkileşim katmak için vardı.
+        Günüüzde javascriptin anlamaı daha büyüdü.
+        Eskiden sadece front-end kodlama yaparken kullanlan bir dilken
+        bügünlerde NodeJs platformu sayesinde back-end kodlama da yapılıyor.
+
+        JavaScript Nereye Yazılır?
+        1. <script> eementi içerisine
+        2. Harici dosyaya
+     -->
+
+    <script>
+        //Temel Programlama Bileşenleri
+
+        // Değişken
+
+        let variable;
+        var variable02;
+        //bu tipler c# ile karıştırma...
+        variable03 = 5;
+
+
+        //Değer atama
+        variable = 10; // variable değişkeninin tipi NUMBER oldu.       
+
+        variable = "Tsubasa";// variable değişkeninin tipi string oldu.
+
+        const variable1 = 3;
+
+        variable = undefined;
+        // JavaScript dili Loosly(weakly) Typed bir dildir.
+        variable = null;
+        variable = true;//şimdide tipi bool oldu..
+
+
+
+        // let Nedir?
+        // var nedir?
+        // hiçbirşey yazmadan değişken tanmlama nedir?
+        // Yukarıda yazılan değişken tanımlama şekilleri arasında değikenin ömrü ile ilgili
+        // farklılıklardan bahsedebiliriz...
+
+        //1. let==> değişken yalnızca tanımlandığı block içerisinde erişilebilir.
+        //2. var==> değişken tanımlandığı function içerisinde erişilebilir...
+        //(variable Hoisting araştır)
+        //3. => Herhangi bir keyword kullanmadan değişken tanımlarsanız bu GLOBAL değişken anlamına gelir.
+        //4. const==>let keywordü ile tanımlanmış değişkenler gibi erişilebilirliği mevcut blok içerisinde
+        //  ancak önemli farkı; değeri sonradan değiştirilemez.
+
+        // Eğer bir değişkeni tanımlayıp ilk değeri(Initialize) tanımlanmazs değişkenin tipi 'undefined'
+
+        vaiable = undefined;// Undefned
+
+        //Bir değişkene soraadanda undefined değeri atanailir.
+        variable = null;// Object tipi
+
+        /*
+                Veri Tipleri
+                1.Number
+                2.String
+                3.Boolean
+                4.Object
+                5.Undefined
+        */
+
+        // Program akış kontrolü
+        // 1.  Sıralı kod akışı
+        // 2. Karar kontrol yapıları (if/if-else/switch-case)
+        // 3. Döngü kontrol yapıları (while/do-whle/for/for(each))
+
+        let number = 11;
+        if (number == 5) { }
+        else { }
+
+        switch (number) {
+            case 1:
+                //1 olduğunda bu işlemi yap
+                break;
+            case 2:
+            case 3:
+            case 4:
+                break;
+            default:
+                // Hiçbir case durumuna uymadığı durumlarda (bir nevi else) bu kodlar
+                //çalışır.
+                break;
+        }
+
+        // 3. Döngü kontrol yapıları
+        let counter=0;
+        while (ounter<10)
+        {}
+
+        let isActive  =false;
+        while (isActive)
+        {}
+
+        do
+        {
+
+        }while(isActive);
+
+        let name="Tsubasa";
+        name='Tsubasa';
+        // Initialize
+        // Array declaration
+        // Literal value/assigment
+        let names = ['Tsubasa',"Misaki",'Hyuga',10]
+
+        for(let i=0;i<names.length;i++){
+            console.log(names[i]);
+        }
+    </script>
+</body>
+
+</html>

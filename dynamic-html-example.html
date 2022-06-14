@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- data attribute -->
+<body data-some-info="Here is body!!">
+    <!--
+        Ekrana 5 x 5 toplam 25 kareden oluşan div'ler oluşturun
+        Div elementleri sabit HTML olarak yazılmayacak, JS ile ekrana eklenecek
+    -->
+
+    <script>
+
+        for (let i = 0; i < 5; i++) {
+            let div = document.createElement('div');
+            document.body.appendChild(div);
+
+            div.dataset.index = i;
+        }
+
+        alert(document.body.dataset.someInfo);
+
+        // Math.random() => 0 ile 1 arasında random sayı üretir
+        // Math.round() => Sayıyı en yakın tam sayıya yuvarlar
+        // Math.floor() => sayıyı bir alttaki tam sayıya yuvarlar
+        // Math.ceil() => sayıyı bir üstteki tam sayıya yuvarlar
+        
+    </script>
+</body>
+
+</html>
